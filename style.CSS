@@ -17,7 +17,7 @@ body {
 header {
 
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	color: #1F0812
 }
 
@@ -43,6 +43,8 @@ h3, h4 {
 	margin-bottom: 10px;
 	font-size: 2em;
 	color: #fbff00;
+	display: flex;
+	justify-content: center;
 	
 }
 
@@ -52,6 +54,9 @@ p {
 
 li {
 	font-weight: bold;
+	width: 25%;
+	margin: auto;
+	text-align: left;
 }
 
 img {
@@ -63,19 +68,26 @@ img {
 	margin-top: 5px;
 }
 
-.imger {
+.img-on-top, .img-on-bot {
 	border-radius: 25%;
 	margin-inline-end: 10px;
+	height: 400px;
+	width: 400px;
 }
 
-.h3_div1, .h4_div1 {
+.h3_div1 {
 
 	display: flex;
 	justify-content: center;
 	width: 800px;
 	text-align: justify;
-	margin-top: 20px;
+	padding-top: 1%;
+	margin: auto;
 }
+
+.h3_div1 p {
+	margin-left: 420px;
+} 
 
 #paragraph2 {
 	margin-inline-start: 10px;
@@ -83,6 +95,10 @@ img {
 
 .list {
 	list-style-type: none;
+	margin: auto;
+	display: block;
+
+	text-align: center;
 }
 
 .inLink, .exLink {
@@ -91,3 +107,39 @@ img {
 	font-weight: bold;
 }
 
+/* All the rules below were coded in order to achieve an image alternation effect. Images alternation learned following documentation on MDN, on https://www.taniarascia.com/crossfade-between-two-images-with-css-animations/ and on https://blog.hubspot.com/website/css-animation-delay#:~:text=The%20CSS%20animation%2Ddelay%20property,milliseconds%20before%20the%20animation%20starts./ 
+Disclaimer: I didn't learn how to fully use and apply those resources. Only understood the local use and used following a guide. */
+
+.images {
+	position: relative;
+	margin-bottom: 400px;
+}
+
+.images img {
+	position: absolute;
+}
+
+.img-on-top {
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-direction: alternate;
+}
+
+/* I specifically didn't understand how keyframes work. WIll need more tests until I fully get it. */
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
