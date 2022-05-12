@@ -101,7 +101,7 @@ img {
 	text-align: center;
 }
 
-.inLink, .exLink {
+.internalLink, .externalLink {
 	text-decoration: underline;
 	color: #ff006a ;
 	font-weight: bold;
