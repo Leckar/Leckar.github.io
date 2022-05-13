@@ -6,7 +6,7 @@
 	<meta charset="UTF-8"	 >
 	<meta	http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link	rel="stylesheet" type="text/CSS" href="./style.css">
+	<link rel="stylesheet" href="./style.css" type="text/CSS">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -15,13 +15,12 @@
 	</title>
 </head>
 <body>
-
 	<!--cabeçalho-->	
 	<header id="heroTitle">
-		<h1>
+		<h1 id="mainTitle">
 			Gustavo Leckar
 		</h1>
-		<h3>
+		<h3 id="subTitle">
 			Web developer
 		</h3>
 	</header>
@@ -53,23 +52,23 @@
 	</aside>	
 	
 	<!--Main-->
-	<main>
+	<main class="main">
 
 		<!--About me-->
 		<section id="aboutMe">
 			<h4 class="sectionTitle">
 				Sobre mim:
 			</h4>
-			<article>
+			<article id="aboutMeArticle">
 				<div class="images">
 						<img class="img-on-bot" src="./img/face-pic.jpg" alt="Gustavo com camiseta de time de esports depois de cortar o cabelo."> 
 						<img class="img-on-top" src="./img/profile-pic.jpeg" alt="Foto do Gustavo olhando para a câmera com um leve sorriso e a cabeça inclinada para a esquerda e apoiada em sua mão.">
 				</div>	
 				<p>
 					<br>
-					&nbsp; Desenvolvedor web full stack em formação. <strong>Brasileiro</strong>, natural do estado de São Paulo e residente de <strong>Niterói - RJ</strong>. <br> 
-					&nbsp;Já atuou bastante na área de tecnologia de informação, mesmo que não com desenvolvimento. Já jogou Magic The Gathering: Arena competitivamente e foi manager da equipe de MTG:A e Valorant da atlética de esports <b>INTZ A2E UFF</b>. <br>
-					&nbsp; Gosto bastante de ler nas horas vagas, apesar de ler mais textos em inglês que em minha língua materna. Também costumo jogar jogos eletrônicos, dentre eles meus favoritos no momento são os jogos da série <em>SoulsBorne</em> da FromSoftware, Valorant e Path Of Exile(tenho um Mousepad ENORME desse jogo). Além disso costumo assistir a videos variados no Youtube.
+					&nbsp; Desenvolvedor web full stack em formação. <strong>Brasileiro</strong>, natural do estado de São Paulo e vivo em <strong>Niterói - RJ</strong>. <br> 
+					&nbsp; Já atuei bastante na área de tecnologia de informação, na área de suporte a usuário. Já joguei Magic The Gathering: Arena pela atlética de esports <b>INTZ A2E UFF</b> e também fui manager das equipes de MTG:A e Valorant da atlética. <br>
+					&nbsp; Gosto bastante de ler nas horas vagas, apesar de ler mais textos em inglês que em minha língua materna. Jogos eletrônicos também fazem parte do meu lazer.  Meus preferidos atualmente são os jogos da série <em>SoulsBorne</em> da FromSoftware, Valorant e Path Of Exile(tenho um Mousepad ENORME desse jogo). Além disso costumo assistir a videos variados no Youtube.
 				</p>
 			</article>
 		</section>
@@ -85,13 +84,21 @@
 						Curioso e minucioso;
 					</li>
 					<li>
-						Tenta encontrar a forma mais eficiente de se fazer algo;
+						Tento ser eficiente;
 					</li>
 					<li>
 						<em>Quick learner</em>;
 					</li>
-					<li>Facilidade com tecnologias;</li>
 					<li>
+						Facilidade com tecnologia;
+					</li>
+					<li>
+						Leitura e escrita de inglês fluente, mas com fala de nível avançado;
+					</li>
+					<li>Bom mediador;</li>
+				</ol>
+				<ol class="list">
+					<li class="iconLine">
 						<img 
 						class="icons"
 						src="https://img.shields.io/badge/Linux_Mint-87CF3E?style=for-the-badge&logo=linux-mint&logoColor=white" 
@@ -102,6 +109,8 @@
 						src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" 
 						alt="HTML5"
 						>
+						</li>
+						<li class="iconLine">
 						<img 
 						class="icons"
 						src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" 
@@ -112,13 +121,17 @@
 						src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" 
 						alt="JavaScript">
 					</li>
+					<li class="iconLine">
+						<img class="icons" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github">
+						<img class="icons" src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=black" alt="">
+					</li>
 				</ol>
 			</div>
 		</section>
 	</main>
 	
 	<!--Footer-->
-	<footer>
+	<footer class="footer">
 		
 		<!--External Links-->
 		<nav id="external">
@@ -145,5 +158,10 @@
 				</ul>
 			</div>	
 		</nav>
+		<div id="socialMedia">
+			<a href="https://www.linkedin.com/in/gustavoleckar/" target="_blank"><img src="./img/linkedin-icon-black-and-white-2.png" alt="Linkedin do Leckar"></a>
+			<a href="https://github.com/Leckar" target="_blank"><img src="./img/GitHub-Mark-120px-plus.png" alt="Github do Leckar"></a>
+			<a href="https://twitter.com/G_LeckaR/" target="_blank"><img src="./img/twitter-icon-black.png" alt="Twitter do Leckar"></a>
+		</div>
 	</footer>
 

@@ -1,145 +1,242 @@
-*{
+	/* Default Browser margin & padding reset */
+	*{
 
-	margin: 0px;
-	padding: 0px;
-}
+		margin: 0;
+		padding: 0;
+	}
 
-body {
-
-	margin: 15px;
-	padding: 10px;
-	background: black;
-	font-family: 'PT Sans', sans-serif;
-	color: #00eeff;
-	font-size: 16px;
-}
-
-header {
-
-	display: flex;
-	justify-content: center;
-	color: #1F0812
-}
-
-h1 {
-
-	background-image: radial-gradient(circle, #ffffff 25%, #fbff00);
-	padding: 5px;
-	border-radius: 5px 30px;
-	width: 390px;
-  height: 60px;
-	background-position: center;
-	text-align: center;
-	font-size: 3em;
-	font-family: 'Expletus Sans', 'PT Sans';
+	html , body {
+		height: 100%;
+	}
 	
-}
-
-h3, h4 {
-
-	text-align: left;
-	padding: 5px 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-size: 2em;
-	color: #fbff00;
-	display: flex;
-	justify-content: center;
+	/* Basic structures */
+	body {
+		background-color: rgb(0, 0, 0);
+		font-size: 16px;
+		font-family: 'PT Sans', sans-serif;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
 	
-}
+	#heroTitle , #sideBar , .main {
+		flex: 1 0 auto;
+	}
+	
+	main {
+	
+		color: #00eeff;
+	}
 
-p {
-	font-weight: 400;
-}
+	/* Elements atributes */
+	#heroTitle {
+		
+		font-family: 'Expletus Sans', 'PT Sans';
+		background-image: radial-gradient(circle, #ffffff 25%, #fbff00);
+		padding: 5px;
+		border-radius: 5px 30px;
+		width: 50vh;
+		max-width: 50%;
+		max-height: 110px;
+		background-position: center;
+		margin: 10px auto 10px auto;
+		color: #1F0812
+		
+	}
 
-li {
-	font-weight: bold;
-	width: 25%;
-	margin: auto;
-	text-align: left;
-}
+	.sectionTitle {
 
-img {
-	object-fit: cover;
-}
+		text-align: left;
+		display: flex;
+		justify-content: center;
+		color: #fbff00;
+		padding: 10px 10px;
+	}
 
-.icons {
-	border-radius: 5px;
-	margin-top: 5px;
-}
+	h3 , h4 {
 
-.img-on-top, .img-on-bot {
-	border-radius: 25%;
-	margin-inline-end: 10px;
-	height: 400px;
-	width: 400px;
-}
+		font-size: 2em;
+	}
 
-.h3_div1 {
+	#mainTitle {
 
-	display: flex;
-	justify-content: center;
-	width: 800px;
-	text-align: justify;
-	padding-top: 1%;
-	margin: auto;
-}
+		font-size: 3em;
+	}
 
-.h3_div1 p {
-	margin-left: 420px;
-} 
+	.list {
 
-#paragraph2 {
-	margin-inline-start: 10px;
-}
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		flex-grow: 1;
+	}
 
-.list {
-	list-style-type: none;
-	margin: auto;
-	display: block;
+	#skillsList {
 
-	text-align: center;
-}
+		display: flex;
+		justify-content: center;
+		margin: auto;
+	}
 
-.internalLink, .externalLink {
-	text-decoration: underline;
-	color: #ff006a ;
-	font-weight: bold;
-}
+	#skillsList .list {
+		max-width: 22.5%;
+	}
 
-/* All the rules below were coded in order to achieve an image alternation effect. Images alternation learned following documentation on MDN, on https://www.taniarascia.com/crossfade-between-two-images-with-css-animations/ and on https://blog.hubspot.com/website/css-animation-delay#:~:text=The%20CSS%20animation%2Ddelay%20property,milliseconds%20before%20the%20animation%20starts./ 
-Disclaimer: I didn't learn how to fully use and apply those resources. Only understood the local use and used following a guide. */
+	#skillsList .list li {
+		width: auto;
+		text-align: left;
+		margin: 0.5em;
+		padding-left: 5%;
+	}
 
-.images {
-	position: relative;
-	margin-bottom: 400px;
-}
+	li {
+		font-weight: bold;
+		width: 25%;
+		margin: auto;
+		text-align: left;
+	}
 
-.images img {
-	position: absolute;
-}
+	.internalLink , .externalLink {
 
-.img-on-top {
-  animation-name: fade;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 6s;
-  animation-direction: alternate;
-}
+		text-decoration: underline;
+		color: #ff006a;
+		opacity: 75%;
+		transition: opacity 150ms ease-in-out;
+	}
 
-/* I specifically didn't understand how keyframes work. WIll need more tests until I fully get it. */
+	.internalLink:hover , .externalLink:hover{
 
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+		opacity: 100%;
+	}
+
+	#aboutMe {
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 800px;
+		text-align: justify;
+		padding-top: 1%;
+		margin: auto;
+	}
+
+	#aboutMeArticle {
+
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	#aboutMeArticle p {
+		margin-left: 51%;
+	}
+
+	.footer {
+		
+		flex-shrink: 0;
+		margin-top: auto;
+		margin-bottom: 0;
+		margin-left: 0;
+		margin-right: 0;
+		background-image: linear-gradient(to top, rgb(56, 56, 56) 25%,  transparent);
+		display: flex;
+		justify-content: space-between;
+		height: 120px;
+		align-items: center;
+	}
+
+	.footer li {
+	
+		font-size: 0.8em;
+		width: auto;
+	}
+
+	.footer h4 {
+
+		font-size: 1.5em;
+	}
+
+	.footer img {
+		max-width: 80px;
+		min-width: 60px;
+	}
+
+	.footer nav {
+		
+		flex-grow: 1;
+		min-width: 50%
+	}
+
+	.footer #socialMedia {
+		
+		flex-grow: 1;
+		min-width: 50%;
+		align-self: flex-end;
+
+	}
+		
+	img {
+
+		object-fit: cover;
+	}
+
+	.icons {
+		border-radius: 5px;
+		margin-top: 5px;
+	}
+
+	.img-on-top, .img-on-bot {
+		border-radius: 25%;
+		margin-inline-end: 10px;
+		height: 400px;
+		width: 400px;
+	}
+
+	.images {
+		position: relative;
+		margin-bottom: 400px;
+	}
+
+	.images img {
+		position: absolute;
+	}
+
+	.img-on-top {
+		animation-name: fade;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-duration: 6s;
+		animation-direction: alternate;
+	}
+
+	aside {
+	
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		width: 200px;			
+		z-index: 100;
+	}
+
+	aside li {
+	
+		width: auto;
+	}
+			
+	@keyframes fade {
+		0% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 1;
+		}
+		75% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	
